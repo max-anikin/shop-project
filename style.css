@@ -1,1 +1,165 @@
 /* lesson-09/shop-project */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("images/patt.png");
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+[class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.header .logo {
+    margin-top: 7px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    width: 25%;
+    border-left: 1px solid #2c71b8;
+}
+
+.menu li:last-child {
+    border-right: 1px solid #2c71b8;
+}
+
+.menu a {
+    display: block;
+    height: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: #2c71b8;
+    font-size: 21px;
+}
+
+.menu a:hover {
+    background-color: #2c71b8;
+    color: white;
+}
+
+
+/* Dropdown */
+li.dropdown {
+    position: relative;
+}
+
+li.dropdown > .products-link::after {
+    display: inline-block;
+    content: url("images/arrow-down_icon-3.png");
+    margin-left: 10px;
+}
+
+li.dropdown:hover > .products-link::after {
+    display: inline-block;
+    content: url("images/arrow-down_icon-3-white.png");
+}
+
+.dropdown .submenu {
+    position: absolute;
+    left: -1px;
+    background-color: #2b71b7;
+    width: calc(200% + 2px);
+    padding: 20px 0 20px 0;
+    display: none;
+
+}
+
+/* magic */
+li.dropdown:hover .submenu {
+    display: block;
+}
+
+li.dropdown:hover .products-link {
+    background-color: #2c71b8;
+    color: white;
+}
+
+.submenu .submenu-item {
+    width: 100%;
+        
+    color: white;
+}
+.submenu .submenu-item a {
+    width: 100%;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    text-align: left;
+    padding-left: 16px;
+}
+
+.submenu .submenu-item a:hover {
+    background-color: white;
+    color: #2c71b8;
+}
+/* === end of Dropdown */
+
+/* Search form */
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search-form {
+    height: 40px;
+    border: 1px solid #2b71b7;
+    padding: 4px;
+    display: flex;
+}
+
+.search-form input, 
+.search-form button {
+    border: none;
+    outline: none;
+}
+
+.search-form input {
+    background: none;
+}
+
+.search-form .search-btn {
+    display: block;
+    height: 30px;
+    width: 30px;    
+    background: url("images/search-icon.png") center no-repeat;
+    background-color: #2b71b7;
+}
+/* === end of Search form */
