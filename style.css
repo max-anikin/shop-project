@@ -159,7 +159,7 @@ li.dropdown:hover .products-link {
     display: block;
     height: 30px;
     width: 30px;    
-    background: url("images/search-icon.png") center no-repeat;
-    background-color: #2b71b7;
+    background: url("images/search-icon.png") center no-repeat #2b71b7;
+    background-size: 50%;
 }
 /* === end of Search form */
