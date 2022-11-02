@@ -153,6 +153,13 @@ li.dropdown:hover .products-link {
 
 .search-form input {
     background: none;
+    font-size: 21px;
+    color: #2b71b7;
+    padding-left: 18px;
+}
+
+.search-form input::placeholder {
+    color: #2b71b7;
 }
 
 .search-form .search-btn {
@@ -163,3 +170,13 @@ li.dropdown:hover .products-link {
     background-size: 50%;
 }
 /* === end of Search form */
+
+.cart-snippet {
+    border: 1px solid red;
+}
+
+.cart-btn {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+}
