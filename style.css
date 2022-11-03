@@ -137,7 +137,6 @@ li.dropdown:hover .products-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 0;
 }
 
 .search-form {
