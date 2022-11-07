@@ -1,66 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Shop-Project</title>
-</head>
-<body>
-    <!-- <h1>Helllo world</h1> -->
+  </head>
+
+  <body>
     <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-3">
-                    <div class="logo">
-                        <a href="#">
-                            <img src="images/logo.png" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <nav>
-                        <ul class="menu">
-                            <li><a href="">Home 1</a></li>
-                            <li class="dropdown">
-                                <a  class="products-link" href="#">Products 2</a>
-                                <ul class="submenu">
-                                    <li class="submenu-item"><a href="#">Lorem ipsum dolor</a></li>
-                                    <li class="submenu-item"><a href="#">Sit amet</a></li>
-                                    <li class="submenu-item"><a href="#">Consectetur adipisicing</a></li>
-                                    <li class="submenu-item"><a href="#">Tempor incididunt</a></li>
-                                    <li class="submenu-item"><a href="#">Dolore magna aliqua</a></li>
-                                    <li class="submenu-item"><a href="#">Ut enim ad minim veniam</a></li>
-                                    <li class="submenu-item"><a href="#">Quis nostrud</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="">Shipping</a></li>
-                            <li><a href="">Payments</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-3 right-block">
-                    <form class="search-form" action="#">
-                        <input class="search-text" type="text" name="search-text" placeholder="search">
-                        <button class="search-btn"></button>
-                    </form>
-
-                    <div class="cart-snippet">
-                        <div class="cart-btn"></div>
-                        <div class="cart-count">4</div>
-                    </div>
-
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="logo">
+              <a href="#">
+                <img src="images/logo.png" alt="" />
+              </a>
             </div>
+          </div>
+          <div class="col-6">
+            <nav>
+              <ul class="menu">
+                <li><a href="">Home</a></li>
+                <li class="dropdown">
+                  <a class="products-link" href="#">Products</a>
+                  <ul class="submenu">
+                    <li class="submenu-item">
+                      <a href="#">Lorem ipsum dolor</a>
+                    </li>
+                    <li class="submenu-item"><a href="#">Sit amet</a></li>
+                    <li class="submenu-item">
+                      <a href="#">Consectetur adipisicing</a>
+                    </li>
+                    <li class="submenu-item">
+                      <a href="#">Tempor incididunt</a>
+                    </li>
+                    <li class="submenu-item">
+                      <a href="#">Dolore magna aliqua</a>
+                    </li>
+                    <li class="submenu-item">
+                      <a href="#">Ut enim ad minim veniam</a>
+                    </li>
+                    <li class="submenu-item"><a href="#">Quis nostrud</a></li>
+                  </ul>
+                </li>
+                <li><a href="">Shipping</a></li>
+                <li><a href="">Payments</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-3 right-block">
+            <form class="search-form" action="#">
+              <input
+                class="search-text"
+                type="text"
+                name="search-text"
+                placeholder="search"
+              />
+              <button class="search-btn"></button>
+            </form>
+
+            <div class="cart-snippet">
+              <div class="cart-btn"></div>
+              <div class="cart-count">4</div>
+            </div>
+          </div>
         </div>
+      </div>
     </header>
-    <main class="main">Main</main>
-    <footer class="footer">Footer</footer>
-</body>
+    <main class="main">
+      <section class="slider">
+        <!-- Slider under construction -->
+      </section>
+      <!-- .slider -->
+
+      <div class="container">
+        <div class="row">
+          <aside class="col-3 sidebar">
+            <ul>
+              <li>Lorem ipsum dolor</li>
+              <li>sit amet consectetur,</li>
+              <li>adipisicing elit.</li>
+              <li>Commodi nihil,</li>
+              <li>ab, quia magnam nisi</li>
+              <li>quidem consequuntur</li>
+              <li>sed repellendus labore,</li>
+              <li>ut necessitatibus.</li>
+              <li>Explicabo officiis</li>
+              <li>itaque voluptas</li>
+              <li>dignissimos blanditiis</li>
+              <li>accusantium culpa obcaecati.</li>
+            </ul>
+          </aside>
+          <!-- end of .sidebar-->
+
+          <div class="col-9 center-wrapper">
+            <div class="breadcrumbs">
+              Home page > Products >
+              <span class="current">Laptops and Tablets</span>
+            </div>
+            <!-- end of .breadcrumbs-->
+
+            <section class="product-list">
+              <div class="row">
+                <h2 class="title">Laptops and Tablets</h2>
+                <div class="product-filter">
+                  <div class="default">Sort by Price</div>
+                  <ul class="dropdown">
+                    <li>Sort by name</li>
+                    <li>Sort by date</li>
+                    <li>Sort by popularity</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <!-- end of .product-list-->
+          </div>
+          <!-- end of .center-wrapper-->
+        </div>
+        <!-- end of .row-->
+      </div>
+      <!-- end of .container-->
+      <div class="container">
+        <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      </div>
+    </main>
+    <!-- end of .main-->
+
+    <footer class="footer">FOOTER</footer>
+  </body>
 </html>
