@@ -16,7 +16,6 @@ body {
   border: 1px solid #fff;
   background-color: #2c71b8;
   color: #fff;
-  line-height: 50px;
   font-size: 21px;
   font-weight: 700;
   text-transform: uppercase;
@@ -28,7 +27,6 @@ body {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  /* border: 1px solid magenta; */
 }
 
 .row {
@@ -221,13 +219,13 @@ li.dropdown:hover .products-link {
 }
 /* === end of Cart Snippet === */
 
-/* === Slider === */
+/* === Slider =============================== */
 .slider {
   height: 400px;
   background-color: rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid #fff;
 }
-/* === end of Slider === */
+/* ========================= end of Slider === */
 
 /* === Sidebar =============================== */
 .sidebar {
@@ -295,6 +293,8 @@ li.dropdown:hover .products-link {
 .center-wrapper {
   /* border: 1px solid red; */
   padding-left: 30px;
+  padding-right: 0;
+  padding-bottom: 80px;
 }
 
 .center-wrapper .row {
@@ -309,11 +309,12 @@ li.dropdown:hover .products-link {
   height: 64px;
   color: rgba(255, 255, 255, 0.5);
   line-height: 64px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .breadcrumbs > .current {
   text-decoration: underline;
-  cursor: pointer;
 }
 
 .product-list .title {
@@ -355,6 +356,7 @@ li.dropdown:hover .products-link {
 
 .product-filter {
   position: relative;
+  z-index: 1;
 }
 
 .product-filter .default:after {
@@ -369,7 +371,6 @@ li.dropdown:hover .products-link {
 }
 
 .products {
-  border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -378,10 +379,10 @@ li.dropdown:hover .products-link {
 
 .product {
   width: 270px;
-  flex: 0 0 270px;
   border: 1px solid #fff;
   background-color: rgba(44,113,184,0.75);
   position: relative;
+  margin-bottom: 30px;
 }
 
 .product .buttons {
@@ -460,13 +461,41 @@ li.dropdown:hover .products-link {
   line-height: 48px;
   font-weight: 700;
   text-align: center;
+  margin-top: 20px;
 }
 .product .price sup {
   font-size: 0.5em;
-  /* line-height: 0; */
   position: relative;
   top: -0.8em;
 }
 
+.product .universal-btn {
+  margin: 16px;
+}
 
-/* === end of Central part ================== */
+.product .add-btn {
+  background: url("images/cart-white-icon.png") no-repeat top right;
+  background-position: top 50% right 20px;
+  background-color: rgba(255,255,255,0.2);
+  border: none;
+  text-align: left;
+  padding-left: 24px;
+}
+/* ================== end of Central part === */
+
+.load-more {
+  color: #fff;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;  
+}
+
+.footer {
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.75);
+  font-size: 21px;
+  color: #2c71b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
