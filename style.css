@@ -9,6 +9,19 @@ body {
   background-image: url("images/patt.png");
 }
 
+.universal-btn {
+  display: block;
+  width: 210px;
+  height: 50px;
+  border: 1px solid #fff;
+  background-color: #2c71b8;
+  color: #fff;
+  line-height: 50px;
+  font-size: 21px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -214,13 +227,69 @@ li.dropdown:hover .products-link {
 }
 /* === end of Slider === */
 
-/* ======================== end of Sidebar === */
+/* === Sidebar =============================== */
 .sidebar {
   background-color: rgba(255, 255, 255, 0.2);
+  border-right: 1px solid #fff;
+  width: 270px;
+  padding: 20px 0;
+}
+
+.options {
+  margin: 0 0 20px 30px;
+}
+
+.options > .option {
+  font-size: 21px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.options > li:last-child {
+  margin-bottom: 0;
+}
+
+.options .option-values {
+  text-transform: none;
+  font-weight: 300;
+
+}
+
+.option-values li input[type="checkbox"] {
+  display: none;
+}
+
+.option-values li label:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border: 1px solid #fff;
+}
+
+.option-values li input[type="checkbox"]:checked + label::before {
+  background-color: #fff;
+}
+
+.more {
+  font-size: 21px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.sidebar .universal-btn {
+  margin: 25px auto 0;
 }
 /* ======================== end of Sidebar === */
 
-/* === Central part ======================== */
+/* === Central part ========================== */
 .center-wrapper {
   /* border: 1px solid red; */
   padding-left: 30px;
