@@ -10,6 +10,9 @@ addToCartBtns.forEach((element) =>
   })
 );
 
+/**
+ * Modal Window
+ */
 let moreDetailsBtns = document.querySelectorAll(".more-details");
 
 let modal = document.querySelector(".modal");
@@ -35,18 +38,39 @@ modal.addEventListener("click", function (event) {
   }
 });
 
-// Slider
-$(".slider-block").slick();
-
-// Show Modal wondow on scroll 50% of the page
+// Show Modal window on scroll 50% of the page
 let scrollBreakpoint = (document.body.scrollHeight - visualViewport.height) / 2;
 
-window.addEventListener("scroll", function () {
-  console.clear();
-  console.log("scrollBreakpoint: ", scrollBreakpoint);
-  console.log("window.scrollY: ", window.scrollY);
+document.addEventListener("scroll", modalOnScroll);
 
+function modalOnScroll() {
   if (window.scrollY >= scrollBreakpoint) {
     openModal();
+    document.removeEventListener("scroll", modalOnScroll);
   }
+}
+
+/**
+ * Slider
+ */
+$(".slider-block").slick({
+  dots: true,
 });
+
+/**
+ * Like and Dislike buttons actions
+ */
+let likeBtns = document.querySelectorAll(".add-favorite");
+
+likeBtns.forEach((item) => item.addEventListener("click", likeActions));
+
+function likeActions(event) {
+  let item = event.target;
+  if (item.classList.contains("add-favorite-liked") === true) {
+    item.classList.add("add-favorite");
+    item.classList.remove("add-favorite-liked");
+  } else {
+    item.classList.add("add-favorite-liked");
+    item.classList.remove("add-favorite");
+  }
+}
