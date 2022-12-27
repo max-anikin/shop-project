@@ -41,6 +41,7 @@ modal.addEventListener("click", function (event) {
 // Show Modal window on scroll 50% of the page
 let scrollBreakpoint = (document.body.scrollHeight - visualViewport.height) / 2;
 
+// document.addEventListener("scroll", diagnostics);
 document.addEventListener("scroll", modalOnScroll);
 
 function modalOnScroll() {
@@ -50,11 +51,20 @@ function modalOnScroll() {
   }
 }
 
+function diagnostics() {
+  console.clear();
+  console.log("window.scrollY: ", window.scrollY);
+  console.log("document.body.scrollHeight: ", document.body.scrollHeight);
+  console.log("visualViewport.height: ", visualViewport.height);
+  console.log("scrollBreakpoint: ", scrollBreakpoint);
+}
+
 /**
  * Slider
  */
 $(".slider-block").slick({
   dots: true,
+  adaptiveHeight: true,
 });
 
 /**
@@ -74,3 +84,43 @@ function likeActions(event) {
     item.classList.remove("add-favorite");
   }
 }
+
+///
+///
+///
+///
+
+let incrementBtns = document.querySelectorAll(".increment-btn");
+let decrementBtns = document.querySelectorAll(".decrement-btn");
+let inputFields = document.querySelectorAll(".product-quantity input");
+
+function Counter(incrementBtn, decrementBtn, inputField) {
+  this.domRefs = {
+    incrementBtn,
+    decrementBtn,
+    inputField,
+  };
+  this.toggleButtonState = function () {
+    let count = this.domRefs.inputField.value;
+    this.domRefs.decrementBtn.disabled = count <= 1;
+    this.domRefs.incrementBtn.disabled = count >= 10;
+  };
+  this.toggleButtonState();
+
+  this.increment = function () {
+    this.domRefs.inputField.value = +this.domRefs.inputField.value + 1;
+    this.toggleButtonState();
+  };
+
+  this.decrement = function () {
+    this.domRefs.inputField.value = +this.domRefs.inputField.value - 1;
+    this.toggleButtonState();
+  };
+
+  this.domRefs.incrementBtn.addEventListener("click", this.increment.bind(this));
+  this.domRefs.decrementBtn.addEventListener("click", this.decrement.bind(this));
+}
+
+const counter1 = new Counter(incrementBtns[0], decrementBtns[0], inputFields[0]);
+
+console.log(counter1);
